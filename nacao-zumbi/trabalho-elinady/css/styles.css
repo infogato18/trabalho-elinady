@@ -1,0 +1,274 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #171513;
+    color: #F0E4CC;
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.topo {
+    padding: 20px;
+    border-bottom: 4px solid #B52B24;
+    background-color: #0D0C0B;
+}
+
+/* Título da banda */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 0;
+}
+
+.logo h1 {
+    color: #F0E4CC;
+    font-size: clamp(55px, 10vw, 120px);
+    font-weight: 900;
+    line-height: 0.8;
+    letter-spacing: -5px;
+    text-transform: uppercase;
+}
+
+.selo {
+    color: #B52B24;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: right;
+    transform: rotate(3deg);
+}
+
+/* Menu de navegação */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    border-top: 1px solid #5A5147;
+    padding-top: 15px;
+}
+
+.menu a {
+    color: #F0E4CC;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-right: 1px solid #5A5147;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: #B52B24;
+    background-color: #211B18;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+
+/* Matéria de capa */
+.conteudo {
+    padding: 35px 5%;
+}
+
+.manchete {
+    position: relative;
+    background-color: #E8D9B8;
+    color: #171513;
+    padding: 35px;
+    border-left: 12px solid #B52B24;
+    transform: rotate(-1deg);
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #B52B24;
+    color: #F0E4CC;
+    padding: 7px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.manchete h2 {
+    font-size: clamp(40px, 8vw, 90px);
+    line-height: 0.9;
+    letter-spacing: -3px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.resumo {
+    max-width: 500px;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.credito {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-top: 1px solid #8B7B63;
+    padding-top: 12px;
+}
+/* Foto da banda */
+.foto-capa {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.foto-capa img {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    border: 4px solid #B52B24;
+}
+
+.foto-capa figcaption {
+    margin-top: 10px;
+    color: #D5C4A1;
+    font-size: 12px;
+    text-align: left;
+}
+/* História da banda */
+.historia {
+    margin-top: 60px;
+    padding: 30px 10px;
+    border-top: 3px solid #B52B24;
+    border-bottom: 1px solid #5A5147;
+}
+
+.historia h2 {
+    color: #F0E4CC;
+    font-size: clamp(30px, 5vw, 55px);
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    transform: rotate(-1deg);
+}
+
+.historia > p:not(.etiqueta) {
+    max-width: 700px;
+    color: #D5C4A1;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Rodapé */
+.rodape {
+    margin-top: 60px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.rodape p {
+    color: #D5C4A1;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.rodape a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #F0E4CC;
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 2px solid #B52B24;
+    padding-bottom: 4px;
+}
+
+.rodape a:hover {
+    color: #B52B24;
+}
+
+/* Tabela da discografia */
+.tabela-discos {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+.tabela-discos table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #F0E4CC;
+    text-align: left;
+}
+
+.tabela-discos th {
+    background-color: #B52B24;
+    color: #F0E4CC;
+    padding: 15px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.tabela-discos td {
+    padding: 15px;
+    border-bottom: 1px solid #5A5147;
+    font-size: 15px;
+}
+
+.tabela-discos tbody tr:nth-child(odd) {
+    background-color: #211B18;
+}
+
+.tabela-discos tbody tr:hover {
+    background-color: #38211D;
+}
+
+/* Discografia — estilo fanzine */
+.discos-destaque {
+    margin-top: 55px;
+    border-top: 3px solid #B52B24;
+}
+
+.disco {
+    padding: 25px 10px;
+    border-bottom: 1px dashed #8B7B63;
+}
+
+.disco:nth-child(2) {
+    margin-left: 8%;
+    transform: rotate(-1deg);
+}
+
+.disco:nth-child(3) {
+    margin-left: 3%;
+    transform: rotate(1deg);
+}
+
+.numero {
+    color: #B52B24;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.disco h3 {
+    display: inline-block;
+    color: #F0E4CC;
+    font-size: clamp(30px, 5vw, 55px);
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.disco p:not(.numero) {
+    max-width: 650px;
+    color: #D5C4A1;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
