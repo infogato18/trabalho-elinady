@@ -1,0 +1,384 @@
+
+/* CONFIGURAÇÃO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #171513;
+    color: #F0E4CC;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    padding: 20px 7%;
+    border-bottom: 1px solid #655747;
+}
+
+.linha-editorial {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #655747;
+    color: #D5C4A1;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.identidade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0 15px;
+}
+
+.identidade h1 {
+    color: #F0E4CC;
+    font-size: clamp(45px, 9vw, 100px);
+    font-weight: 900;
+    line-height: 0.85;
+    letter-spacing: -4px;
+}
+
+.chamada {
+    color: #B52B24;
+    font-size: clamp(16px, 3vw, 25px);
+    font-weight: 900;
+    line-height: 1.1;
+    text-align: right;
+    transform: rotate(-3deg);
+}
+
+/* MENU */
+.menu {
+    padding: 0 7%;
+    border-bottom: 3px solid #B52B24;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 15px 18px;
+    color: #D5C4A1;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: #FFFFFF;
+    border-bottom-color: #B52B24;
+}
+
+/* ÁREA PRINCIPAL */
+.jornal {
+    width: 86%;
+    max-width: 1150px;
+    margin: 45px auto;
+}
+
+/* MANCHETE */
+.manchete {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    padding: 25px 0;
+    border-top: 5px solid #B52B24;
+    border-bottom: 1px solid #655747;
+}
+
+.etiqueta {
+    margin-bottom: 15px;
+    color: #B52B24;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.manchete h2 {
+    color: #F0E4CC;
+    font-size: clamp(42px, 8vw, 88px);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -3px;
+}
+
+.subtitulo {
+    max-width: 650px;
+    margin-top: 20px;
+    color: #D5C4A1;
+    font-size: 19px;
+}
+
+.texto-manchete {
+    max-width: 650px;
+    margin-top: 15px;
+    color: #C5B8A2;
+    font-size: 15px;
+}
+
+/* FOTO PRINCIPAL */
+.foto-manchete {
+    max-width: 1000px;
+    margin: 35px auto 60px;
+}
+
+.foto-manchete img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border: 1px solid #655747;
+    filter: contrast(110%) saturate(75%);
+}
+
+.foto-manchete figcaption {
+    padding-top: 10px;
+    color: #D5C4A1;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* HISTÓRIA DA BANDA */
+.materia-historia {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 25px 0;
+    border-top: 1px solid #655747;
+    border-bottom: 1px solid #655747;
+}
+
+.materia-historia h2,
+.arquivo-discos > h2,
+.destaques-discos > h2 {
+    margin-bottom: 20px;
+    color: #F0E4CC;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.texto-historia {
+    margin: 18px 0;
+    color: #D5C4A1;
+    font-size: 16px;
+}
+
+.assinatura-materia {
+    margin-top: 25px;
+    color: #B52B24;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* EXPEDIENTE */
+.expediente {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px 0;
+    border-top: 3px solid #B52B24;
+    border-bottom: 1px solid #655747;
+    color: #D5C4A1;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* DISCOGRAFIA */
+.arquivo-discos {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.introducao-discos {
+    max-width: 700px;
+    margin-bottom: 25px;
+    color: #D5C4A1;
+}
+
+.tabela-discos {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabela-discos th {
+    padding: 14px 12px;
+    background-color: #33251F;
+    color: #F0E4CC;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.tabela-discos td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #51483D;
+    color: #D5C4A1;
+    vertical-align: top;
+}
+
+.tabela-discos tr:hover td {
+    background-color: #211C18;
+}
+
+/* TRÊS DESTAQUES MUSICAIS */
+.destaques-discos {
+    max-width: 1000px;
+    margin: 60px auto 20px;
+    padding-top: 25px;
+    border-top: 3px solid #B52B24;
+}
+
+.destaque-musical {
+    display: grid;
+    grid-template-columns: 130px 35px minmax(0, 1fr);
+    align-items: start;
+    gap: 18px;
+    padding: 25px 0;
+    border-bottom: 1px solid #51483D;
+}
+
+.capa-disco {
+    width: 130px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 2px solid #D5C4A1;
+    filter: grayscale(25%) contrast(110%);
+}
+
+.destaque-musical > span {
+    color: #B52B24;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.destaque-musical h3 {
+    margin-bottom: 8px;
+    color: #F0E4CC;
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.destaque-musical p {
+    color: #D5C4A1;
+    font-size: 15px;
+}
+
+/* RODAPÉ */
+.rodape {
+    padding: 30px 7%;
+    border-top: 3px solid #B52B24;
+    background-color: #100F0E;
+    color: #D5C4A1;
+    font-size: 12px;
+}
+
+.rodape p {
+    margin-bottom: 8px;
+}
+
+.rodape a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #F0E4CC;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.rodape a:hover {
+    color: #B52B24;
+}
+
+/* AJUSTES PARA CELULAR */
+@media (max-width: 600px) {
+    .cabecalho {
+        padding: 16px 5%;
+    }
+
+    .identidade {
+        align-items: flex-start;
+    }
+
+    .identidade h1 {
+        letter-spacing: -2px;
+    }
+
+    .chamada {
+        font-size: 14px;
+    }
+
+    .menu {
+        padding: 0 3%;
+    }
+
+    .menu a {
+        padding: 12px 9px;
+        font-size: 10px;
+    }
+
+    .jornal {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .manchete h2 {
+        letter-spacing: -2px;
+    }
+
+    .tabela-discos {
+        font-size: 12px;
+    }
+
+    .tabela-discos th,
+    .tabela-discos td {
+        padding: 10px 6px;
+    }
+
+    .destaque-musical {
+        grid-template-columns: 85px 25px minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .capa-disco {
+        width: 85px;
+    }
+
+    .destaque-musical h3 {
+        font-size: 18px;
+    }
+
+    .destaque-musical p {
+        font-size: 13px;
+    }
+}
